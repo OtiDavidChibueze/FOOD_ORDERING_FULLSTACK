@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-const PORT: string | undefined = process.env.port;
+const PORT = process.env.PORT;
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
-export { PORT };
+export { PORT, MONGODB_CONNECTION_STRING };
