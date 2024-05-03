@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import MobileNav from "./MobileNav";
+import DesktopNav from "./DesktopNav";
 
 const Header = () => {
   return (
@@ -8,8 +10,16 @@ const Header = () => {
           to={"/"}
           className="tracking-tight text-3xl text-orange-500 font-bold"
         >
-          WebWeaverFoods.com
+          WebweaverFoods.com
         </Link>
+
+        <div className="md:hidden">
+          <MobileNav />
+        </div>
+
+        <div className="hidden md:block">
+          <DesktopNav />
+        </div>
       </div>
     </div>
   );
